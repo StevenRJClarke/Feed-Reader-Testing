@@ -16,7 +16,9 @@ gulp.task('default', ['copy-html', 'scripts-dist', 'styles', 'lint'], function()
   gulp.watch('dist/index.html').on('change', browserSync.reload);
 
   browserSync.init({
-    server: './dist'
+    server: {
+      baseDir: ["./dist", "./test"]
+    }
   });
 });
 
@@ -45,26 +47,26 @@ gulp.task('lint', function() {
       // To have the process exit with an error code (1) on
       // lint error, return the stream and pipe to failOnError last.
       // .pipe(eslint.failAfterError())
-      );
+  );
 });
 
 gulp.task('copy-html', function() {
   gulp.src('app/index.html')
-  .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest('dist'));
 });
 
 gulp.task('styles', function() {
   gulp.src('app/sass/**/*.scss')
-  .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-  .pipe(autoprefixer({
-    browsers: ['last 2 versions']
-  }))
-  .pipe(gulp.dest('dist/css'))
-  .pipe(browserSync.stream());
+    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+    .pipe(autoprefixer({
+      browsers: ['last 2 versions']
+    }))
+    .pipe(gulp.dest('dist/css'))
+    .pipe(browserSync.stream());
 });
 
 gulp.task('tests', function() {
   return gulp.src('test/spec/feedreader.js')
-  .pipe(jasmineBrowser.specRunner({ console: true }))
-  .pipe(jasmineBrowser.headless({ driver: 'chrome' }));
+    .pipe(jasmineBrowser.specRunner({ console: true }))
+    .pipe(jasmineBrowser.headless({ driver: 'chrome' }));
 });
