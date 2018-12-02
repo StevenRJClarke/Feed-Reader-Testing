@@ -22,6 +22,13 @@ gulp.task('default', ['copy-html', 'scripts-dist', 'styles', 'lint'], function()
   });
 });
 
+gulp.task('dist', [
+  'copy-html',
+  'styles',
+  'lint',
+  'scripts-dist'
+]);
+
 gulp.task('scripts', function() {
   gulp.src('app/js/**/*.js')
     .pipe(concat('app.js'))
