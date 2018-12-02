@@ -31,7 +31,7 @@
          * in the allFeeds object and ensures it has a URL defined
          * and that the URL is not empty.
          */
-         it('has feeds that are defined', function() {
+         it('has feeds with URLs that are defined', function() {
             // Loop through each element of the allFeeds object
 
             allFeeds.forEach(function(element) {
