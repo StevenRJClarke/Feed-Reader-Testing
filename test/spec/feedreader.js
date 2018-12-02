@@ -31,7 +31,7 @@
          * in the allFeeds object and ensures it has a URL defined
          * and that the URL is not empty.
          */
-         it('has feeds with URLs that are defined', function() {
+        it('has feeds with URLs that are defined', function() {
             // Loop through each element of the allFeeds object
 
             allFeeds.forEach(function(element) {
@@ -51,6 +51,20 @@
          * in the allFeeds object and ensures it has a name defined
          * and that the name is not empty.
          */
+        it('has feeds with names that are defined', function() {
+            // Loop through each element of the allFeeds object
+
+            allFeeds.forEach(function(element) {
+                //Find the name of the feed
+                const name = element.name;
+
+                //Is the name defined?
+                expect(name).toBeDefined();
+
+                //Does the name not have 0 length?
+                expect(name.length).not.toBe(0);
+            })
+        });
      });
 
 
