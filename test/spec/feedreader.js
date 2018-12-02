@@ -76,6 +76,16 @@
          * the CSS to determine how we're performing the
          * hiding/showing of the menu element.
          */
+         it('is hidden by default', function() {
+            /* <body> has class 'menu-hidden' on loading, which moves
+               menu 12em to the left of the screen where it cannot be
+               seen. This class is toggled when menu icon clicked.
+
+               Test if body has class 'menu-hidden'
+             */
+             expect($('body').hasClass('menu-hidden')).toBe(true)
+
+         });
 
          /* TODO: Write a test that ensures the menu changes
           * visibility when the menu icon is clicked. This test
