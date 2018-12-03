@@ -92,6 +92,21 @@
           * should have two expectations: does the menu display when
           * clicked and does it hide when clicked again.
           */
+          it('changes visibility when the menu icon is clicked', function() {
+              /* Click the menu icon to open the menu.
+                 Expect the menu to be shown: <body> will not have class
+                 'menu-hidden'
+               */
+              $('.menu-icon-link').click();
+              expect($('body').hasClass('menu-hidden')).toBe(false);
+
+              /* Click the menu icon again to close the menu.
+                 Expect the menu to be hidden: <body> will have class
+                 'menu-hidden'
+               */
+              $('.menu-icon-link').click();
+              expect($('body').hasClass('menu-hidden')).toBe(true);
+          });
 
     });
           /* TODO: Write a new test suite named "Initial Entries" */
