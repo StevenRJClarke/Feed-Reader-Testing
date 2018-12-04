@@ -119,17 +119,17 @@
          * Remember, loadFeed() is asynchronous so this test will require
          * the use of Jasmine's beforeEach and asynchronous done() function.
          */
-         beforeEach(function(done){
-            let i = 0;
+         // beforeEach(function(done){
+         //    let i = 0;
 
-            loadFeed(i++, function() {
-                done();
-            })
-         });
+         //    loadFeed(i++, function() {
+         //        done();
+         //    })
+         // });
 
-         it('contains at least a single entry', function(done) {
+         it('contains at least a single entry', function() {
             expect($('.feed > a').length).toBeGreaterThan(1);
-            done();
+            // done();
 
          });
      });
