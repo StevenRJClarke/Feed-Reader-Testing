@@ -120,9 +120,7 @@
          * the use of Jasmine's beforeEach and asynchronous done() function.
          */
          beforeEach(function(done){
-            let i = 0;
-
-            loadFeed(i++, function() {
+            loadFeed(0, function() {
                 done();
             })
         });
