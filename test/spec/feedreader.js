@@ -119,7 +119,7 @@
          * Remember, loadFeed() is asynchronous so this test will require
          * the use of Jasmine's beforeEach and asynchronous done() function.
          */
-         beforeEach(function(done){
+         beforeEach(function(done) {
             loadFeed(0, function() {
                 done();
             })
@@ -139,5 +139,27 @@
          * by the loadFeed function that the content actually changes.
          * Remember, loadFeed() is asynchronous.
          */
+         let firstFeed = '',
+               secondFeed = '';
+
+         beforeEach(function(done) {
+            /* Load the Udacity Blog and get its feeds*/
+            loadFeed(0, function() {
+                /* Get the first entry of the first feed */
+                firstFeed = $('.feed > a')[0];
+            });
+
+            /* Load the CSS Tricks and get its feeds*/
+            loadFeed(1, function() {
+                /* Get the first entry of the second feed */
+                secondFeed = $('.feed > a')[0];
+                done();
+            });
+        });
+
+         it('changes content when new feed selected', function(done) {
+            expect(firstFeed).not.toEqual(secondFeed);
+            done();
+        });
      });
 }());
