@@ -35,35 +35,36 @@ The application is found at _index.html_ in the _dist_ folder.
 
 Many work tools to build and test the application. Source files are in the _app_ folder. Actual application files are in the _dist_ folder.
 
-...### Dependencies
+### Dependencies
 
-...The appliation was built with gulp, using:
+   The appliation was built using:
 
-...* gulp-sass (SASS)
-...* gulp-autoprefixer (autoprefixing)
-...* browser-sync (live editing)
-...* gulp-eslint (linter)
-...* gulp-concat (concatenate script files)
-...* gulp-uglify (minify)
+   * gulp
+   * gulp-sass (SASS)
+   * gulp-autoprefixer (autoprefixing)
+   * browser-sync (live editing)
+   * gulp-eslint (linter)
+   * gulp-concat (concatenate script files)
+   * gulp-uglify (minify)
 
-...The test were built with gulp, using:
+   The test were built with gulp, using:
 
-...* gulp-jasmine-browser (jasmine test suites in browser)
+   * gulp-jasmine-browser (jasmine test suites in browser)
 
-...### Installing the Build Tools
+   ### Installing the Build Tools
 
-...Install the build tools listed above. See Node Package Manager for installation instructions.
+   Install the build tools listed above into the root folder. See Node Package Manager for installation instructions.
 
-...### Using the Build Tools
+   ### Using the Build Tools
 
-...*When amending the HTML and SASS file*
+   *When amending the HTML and SASS file*
 
-...Use the _gulp_ command in the terminal to see live editing. This will:
+   Use the _gulp_ command in the terminal to see live editing. This will:
 
-...* change the styles if you change the _app/sass/style.scss_ SASS file
-...* change the HTML if you change the _app/index.html_ HTML file
-...* lint the JS files in the _app/js/app.js_ JS file
+   * change the styles if you change the _app/sass/style.scss_ SASS file
+   * change the HTML if you change the _app/index.html_ HTML file
+   * lint the JS files in the _app/js/app.js_ JS file
 
-...*When amending the JS file*
+   *When amending the JS file*
 
-...Use the _gulp scripts-dist_ command if you change the _app/js/app.js_ file.
+   Use the _gulp scripts-dist_ command if you change the _app/js/app.js_ file.
