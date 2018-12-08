@@ -1,7 +1,17 @@
-# Project Overview
+# Feed Reader Testing
 
-In this project you are given a web-based application that reads RSS feeds. The original developer of this application clearly saw the value in testing, they've already included [Jasmine](http://jasmine.github.io/) and even started writing their first test suite! Unfortunately, they decided to move on to start their own company and we're now left with an application with an incomplete test suite. That's where you come in.
+##About
 
+This is a feed reader application, which allows the user to choose to see several RSS feeds. The jasmine framework has been used for "test-driven development": tests for the functionality of the application are written first, which will initially fail. Code is written to provide the functionality of the application to pass these tests.
+
+##The Tests
+
+The application must:
+
+* Have access to feeds that have names and a URL
+* Have a menu of links to feeds, that is hidden by default, but will display on the click of the menu icon
+* Load a feed so that entries are displayed
+* Must show different entries when another feed is selected
 
 ## Why this Project?
 
