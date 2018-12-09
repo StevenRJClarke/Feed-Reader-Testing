@@ -115,7 +115,7 @@
         });
 
          it('contains at least a single entry', function(done) {
-            expect($('.feed > a').length).toBeGreaterThan(1);
+            expect($('.feed .entry').length).toBeGreaterThan(1);
             done();
 
         });
