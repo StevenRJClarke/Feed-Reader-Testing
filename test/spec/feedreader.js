@@ -148,7 +148,7 @@
         });
 
          it('changes content when new feed selected', function(done) {
-            expect(firstFeed).not.toEqual(secondFeed);
+            expect(firstFeed.innerText).not.toEqual(secondFeed.innerText);
             done();
         });
      });
