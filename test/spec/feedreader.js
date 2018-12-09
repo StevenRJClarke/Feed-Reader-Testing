@@ -27,9 +27,7 @@
         });
 
 
-        /* TODO: Write a test that loops through each feed
-         * in the allFeeds object and ensures it has a URL defined
-         * and that the URL is not empty.
+        /* Tests that each feed in the allFeeds object has an URL
          */
          it('has feeds with URLs that are defined', function() {
             // Loop through each element of the allFeeds object
@@ -47,9 +45,7 @@
         });
 
 
-        /* TODO: Write a test that loops through each feed
-         * in the allFeeds object and ensures it has a name defined
-         * and that the name is not empty.
+        /* Tests that each feed in the allFeeds object has a name
          */
          it('has feeds with names that are defined', function() {
             // Loop through each element of the allFeeds object
@@ -68,13 +64,12 @@
      });
 
 
-    /* TODO: Write a new test suite named "The menu" */
+    /* Test suite for the menu that allows the user to select
+       the feed
+    */
     describe('The menu', function() {
 
-        /* TODO: Write a test that ensures the menu element is
-         * hidden by default. You'll have to analyze the HTML and
-         * the CSS to determine how we're performing the
-         * hiding/showing of the menu element.
+        /* Tests that the menu is hidden when the page is loaded
          */
          it('is hidden by default', function() {
             /* <body> has class 'menu-hidden' on loading, which moves
@@ -87,10 +82,8 @@
 
            });
 
-         /* TODO: Write a test that ensures the menu changes
-          * visibility when the menu icon is clicked. This test
-          * should have two expectations: does the menu display when
-          * clicked and does it hide when clicked again.
+         /* Tests that the menu can be revealed and hidden by clicking on
+            the menu icon
           */
           it('changes visibility when the menu icon is clicked', function() {
               /* Click the menu icon to open the menu.
@@ -110,14 +103,10 @@
 
       });
 
-    /* TODO: Write a new test suite named "Initial Entries" */
+    /* Test suite to check the initial entries in the feed*/
     describe('Initial Entries', function() {
 
-        /* TODO: Write a test that ensures when the loadFeed
-         * function is called and completes its work, there is at least
-         * a single .entry element within the .feed container.
-         * Remember, loadFeed() is asynchronous so this test will require
-         * the use of Jasmine's beforeEach and asynchronous done() function.
+        /* Tests that there is at least one entry in the feed.
          */
          beforeEach(function(done) {
             loadFeed(0, function() {
@@ -132,12 +121,13 @@
         });
      });
 
-    /* TODO: Write a new test suite named "New Feed Selection" */
+    /* Test suite to check that when the user selects a new feed, new entries
+       are shown
+    */
     describe('New Feed Selection', function() {
 
-        /* TODO: Write a test that ensures when a new feed is loaded
-         * by the loadFeed function that the content actually changes.
-         * Remember, loadFeed() is asynchronous.
+        /* Test that when the user selects the CSS Tricks feed, the entries
+           are different to those in the Udacity Blog feed.
          */
          let firstFeed = '',
                secondFeed = '';
