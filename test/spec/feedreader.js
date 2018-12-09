@@ -136,12 +136,12 @@
             /* Load the Udacity Blog and get its feeds*/
             loadFeed(0, function() {
                 /* Get the first entry of the first feed */
-                firstFeed = $('.feed > a')[0];
+                firstFeed = $('.feed .entry')[0];
 
                 /* Load the CSS Tricks and get its feeds*/
                 loadFeed(1, function() {
                     /* Get the first entry of the second feed */
-                    secondFeed = $('.feed > a')[0];
+                    secondFeed = $('.feed .entry')[0];
                     done();
                 });
             });
